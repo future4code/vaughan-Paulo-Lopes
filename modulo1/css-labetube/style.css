@@ -119,3 +119,54 @@ button:hover {
 }
 
 
+@media screen and (max-device-width: 900px)
+{
+ nav {
+ display: none;
+ }
+}
+
+@media screen and (max-device-width: 900px) {
+    input {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+    button {
+        border: none;
+        margin-left: 200px;
+        z-index: 10;
+ 
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+    .iconedireita {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+    .container {
+        display: grid;
+         
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+    main {
+        display: grid;
+        grid-column: 1/3;
+        margin: 20px 0px 20px 0px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+    .iconeBotao {
+        width: 20px;
+        height: 20px;
+    }
+}
+
