@@ -1,0 +1,17 @@
+.dados {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    height: 80px;
+    width: 550px;
+}
+
+.dados h3 {
+    margin-right: 5px;
+}
+
+.dados img {
+    width: 25px;
+    margin-left: 5px;
+}
