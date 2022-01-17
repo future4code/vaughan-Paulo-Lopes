@@ -1,24 +1,12 @@
 import React from 'react';
-import './App.css';
-import CardGrande from './components/CardGrande/CardGrande';
-import ImagemButton from './components/ImagemButton/ImagemButton';
+import styled from 'styled-components'
+import Chat from './components/Chat/Chat'; 
 
-function App() {
-  return (
-    <div className="App">
-      <div className='container'>
-
-      <div className='whatslab'>
-        <header></header>
-        <nav></nav>
-        <main></main>
-        <footer></footer>
-      </div>
-
-      </div>
-     
+function App () {
+  return(
+    <div>
+      <Chat></Chat>
     </div>
-  );
+  )
 }
-
 export default App;
