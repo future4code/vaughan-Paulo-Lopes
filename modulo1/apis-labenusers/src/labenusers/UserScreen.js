@@ -1,12 +1,52 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const Container = styled.div `
+    display: grid;
+    grid-template-rows: 5rem 10rem 7rem;
+`
+const Container2 = styled.div `
+    display: flex;
+`
+
+const UserCard = styled.div `
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 120%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+`
+
+const InputLogin = styled.input`
+  height: 12%;
+  outline: none;
+  border: 1px solid black;
+  font-size: 15px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+`
+
+const ButtonSearch = styled.button `
+    border: 1px solid black;
+    background-color: white;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+`
+
 
 export default class UserScreen extends React.Component {
     state ={
         users: [],
-        userId: "",
-        name: ""
 }
 
 getAllUsers = () => {
@@ -29,23 +69,19 @@ componentDidMount() {
 }
 
 
-deleteUser = (userID) => {
+deleteUser = (id) => {
+    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
     const axiosConfig = {
-        headers:
-            {Authorization: "paulo-tarso-vaughan"}
+        headers: { Authorization: "paulo-tarso-vaughan"}
     }
-    if(window.confirm("You really want to delete this user?")) {
-        axios
-        .delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${userID}`, axiosConfig)
-        .then(() => {
-            alert("User successfully deleted")
-            
-        })
-        .catch((error) => {
-            alert("Error deleting user")
-            console.log(error.response)
-        })
-    }
+    axios.delete(url, axiosConfig)
+    .then((res) => {
+        alert("Usuario deletado com sucesso!")
+        this.getAllUsers()
+    })
+    .catch((error) => {
+        alert("Erro, não foi possivel excluir o usuario")
+    })
 }
 
 searchUser = () => {
@@ -73,24 +109,27 @@ onChangeName = (event) => {
 
         return(
             <div>
-                <br></br>
-                <br></br>
-                <input onChange={this.onChangeName} value={this.state.name} placeholder="Search"></input>
-                <button onClick={this.searchUser}>Search</button>
-
-                <div>
-                    <ul>
-                        {this.state.users.length === 0 && <div>Carregando...</div>}
-                        {this.state.users.map(user => {
-                            return(
-                                <li>
-                                    <p>{user.name}</p>
-                                    <button onClick={this.deleteUser}>X</button>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
+                <Container>
+                    <br></br>
+                    
+                    <div>
+                        <ul>
+                            <InputLogin onChange={this.onChangeName} value={this.state.name} placeholder="Search"></InputLogin>
+                            <ButtonSearch onClick={this.searchUser}>Search</ButtonSearch>
+                            {this.state.users.length === 0 && <div>Nenhum usuário encontrado</div>}
+                            {this.state.users.map(user => {
+                                return(
+                                    <Container2>
+                                        <UserCard key={user.id}>
+                                        <p>{user.name}</p>
+                                        <button onClick={() => this.deleteUser(user.id)}>X</button>
+                                    </UserCard>
+                                    </Container2>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </Container>
             </div>
         )
     }

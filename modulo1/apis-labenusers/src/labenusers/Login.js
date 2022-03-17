@@ -1,6 +1,47 @@
 import React from "react";
+import styled from "styled-components";
 import Labenusers from "./Labenusers"
 import UserScreen from "./UserScreen"
+
+const ButtonSwitch = styled.div `
+    margin-left: 20px;
+    height: 100%;
+    font-size: 20px;   
+    border-radius: 5px ;
+    width: 30%;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+
+    }
+`
+
+const ButtonBox = styled.div `
+    display: flex;
+    margin: 10px;
+    margin-right: 30px;
+    width: 100%;
+    justify-content: center;
+`
+
+const Container = styled.div `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    flex-direction: column;
+    height: 70vh;
+    width: 30vw;
+    margin-left: 35%;
+    margin-top: 7.3%;
+    border-radius: 10px;
+`
 
 export default class Login extends React.Component {
     state = {
@@ -30,11 +71,16 @@ userDetailScreen = () => {
 
     render() {
         return(
-            <div>
-                <button onClick={this.registerScreen}>Register</button>
-                <button onClick={this.userDetailScreen}>User Detail</button>
 
+            <div>
+                <Container>
+                <h1>Register</h1>
                 {this.screenRender()}
+                <ButtonBox>
+                    <ButtonSwitch onClick={this.registerScreen}>Register</ButtonSwitch>
+                    <ButtonSwitch onClick={this.userDetailScreen}>User Detail</ButtonSwitch>
+                </ButtonBox>
+            </Container>
             </div>
         )
     }
