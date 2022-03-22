@@ -1,0 +1,11 @@
+{
+  "name": "exercicio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exe1.js",
+  "scripts": {
+    "start": "node ./exe1.js"
+  },
+  "author": "Paulo Tarso",
+  "license": "ISC"
+}
