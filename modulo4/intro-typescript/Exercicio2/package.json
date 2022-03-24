@@ -1,0 +1,14 @@
+{
+  "name": "exercicio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exe2.js",
+  "scripts": {
+    "start": "tsc && node ./build/exe2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}
