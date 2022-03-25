@@ -1,0 +1,14 @@
+{
+  "name": "exercicio-slide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exeSlide.js",
+  "scripts": {
+    "start": "tsc && node ./build/exeSlide.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}
