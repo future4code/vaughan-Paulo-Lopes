@@ -1,7 +1,7 @@
 type Account = {
     client: string,
     totalBalance: number
-    debt: number[]
+    debt: number[] 
 }
 
 const bankUsers: Account[] = [
