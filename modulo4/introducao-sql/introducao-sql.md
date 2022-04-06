@@ -36,5 +36,34 @@
 
 4.c) SELECT * FROM Actor where (name like "%G%" or name like "%g%") 
 
-4.d) 
-4.b)
+4.d) SELECT * from Actor where (name like "%A%" or name like "%a%" or name like "%G" or name like "%g%") and (salary between 350000 and 900000) (Quase acertei, so esqueci do Between)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.a) A query text faz com que o tamanho da linha aumente (até 2gb)
+
+5.b) Eu acabei criando varios filmes sem querer, que nao tinha nada v com os exercicios
+
+5.c) Eu acabei criando varios filmes sem querer, que nao tinha nada v com os exercicios
+
+5.d) Eu acabei criando varios filmes sem querer, que nao tinha nada v com os exercicios
+
+5.e) Eu acabei criando varios filmes sem querer, que nao tinha nada v com os exercicios
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.a) Select id, name, critic from Movies where id = 2
+
+6.b) Select * from Movies where name = "Arcane"
+
+6.c) Select id, name, synopsis from Movies where critic > 7
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7.a) Select * from Movies where name like "A%"
+
+7.b) Select * from Movies where (synopsis like "%future%" or name like "%future%") 
+
+7.c) Select * from Movies where release_date < "2022-01-01";
+
+7.d) Select * from Movies where (synopsis like "%future%" or name like "%future%") and critic > 7
