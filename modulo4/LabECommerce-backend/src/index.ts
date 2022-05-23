@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cors())
 
 app.listen(3003, () => {
-    console.log("ROOOOOOOOOOODA")
+    console.log("The server is running on localhost:3003")
 })
 
 //-------Cadastro de usuário-------Cadastro de usuário
