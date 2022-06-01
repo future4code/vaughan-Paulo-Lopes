@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "e81ef1a2-9407-4f15-9c26-2d48d8b15a6f",
+		"name": "LabenuSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllTeachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/teacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"teacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllClasses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/class?situation=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"class"
+					],
+					"query": [
+						{
+							"key": "situation",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllHobby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/hobby",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"hobby"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/student?name=paulo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"student"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "paulo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inSameClass",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/sameClass/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"sameClass",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1653432907482"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByHobby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/student/:hobby",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"student",
+						":hobby"
+					],
+					"variable": [
+						{
+							"key": "hobby",
+							"value": "Estudar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllSpecialty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/specialty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"specialty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTeacherBySpecialty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/specialty/:specialty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"specialty",
+						":specialty"
+					],
+					"variable": [
+						{
+							"key": "specialty",
+							"value": "react"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTeacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Indio\",\r\n    \"email\": \"indio@labenu.com\",\r\n    \"bornDate\": \"1995-11-29\",\r\n    \"classId\": \"1653463322618\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createTeacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createTeacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createClass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Moreira\",\r\n    \"module\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createClass",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createClass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Henrique\",\r\n    \"email\": \"henrique@gmail.com\",\r\n    \"bornDate\": \"1972-08-13\",\r\n    \"classId\": \"1653436047044\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createHobby",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dormir\",\r\n    \"userId\": \"1653444915205\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createHobby",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createHobby"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSpecialty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Python\",\r\n    \"teacherId\": \"1653454583657\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createSpecialty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createSpecialty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeTeacherClass",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"classId\": \"1653432907482\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/teacher/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"teacher",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1653463625523"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeModule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"module\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/class/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"class",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1653463322618"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeClass",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"classId\": \"1653440115283\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/student/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"student",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1653463024990"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
