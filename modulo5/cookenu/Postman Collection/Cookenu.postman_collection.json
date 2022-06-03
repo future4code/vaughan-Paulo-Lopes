@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "c9631670-8be1-462b-b979-7d916671345d",
+		"name": "Cookenu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19301541"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Paulo Tarso\",\r\n    \"email\": \"paulo@labenu.com\",\r\n    \"password\": \"paulo123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"paulo@labenu.com\",\r\n    \"password\": \"paulo123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRecipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTczNzRhLWE5MDItNDI1OS04OTRkLTU4ZGYzZjQwNWM1YiIsImlhdCI6MTY1NDA2NjM4MCwiZXhwIjoxNjU0MDY5OTgwfQ.TI-3QBoni--SXTnYan31j0cyKlc_UqYMoWKOzepkCXA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Nugget Frito\",\r\n    \"description\": \"Jogue o nugget no óleo, espere fritar. Pronto, nugget frito pronto!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "followUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhjYzE4ODhmLTdlM2MtNDQwNC05NTJlLTQ3MDNiNDNmYmJkNCIsImlhdCI6MTY1NDA2NDg5MywiZXhwIjoxNjU0MDY4NDkzfQ.7XnbAq8DpYiySFMb_LS0kEqYBZCu-_W_mCZE7AfqqYU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userFollow\": \"8503c052-c9be-4f4a-b873-724e76ad09f2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unfollowUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhjYzE4ODhmLTdlM2MtNDQwNC05NTJlLTQ3MDNiNDNmYmJkNCIsImlhdCI6MTY1NDA2NDg5MywiZXhwIjoxNjU0MDY4NDkzfQ.7XnbAq8DpYiySFMb_LS0kEqYBZCu-_W_mCZE7AfqqYU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userUnfollow\": \"8503c052-c9be-4f4a-b873-724e76ad09f2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user/unfollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyProfile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0YjdmYjBhLTljMzktNDY3ZC04YzcyLWJjNWUwOThiMzBkZCIsImlhdCI6MTY1NDA1NDkwNSwiZXhwIjoxNjU0MDU4NTA1fQ.IM72tVsVZ8YB3sDfewr3tTUtEKsA3RQNbVFITANQxwM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3003/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserProfile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg1MDNjMDUyLWM5YmUtNGY0YS1iODczLTcyNGU3NmFkMDlmMiIsImlhdCI6MTY1NDA1MzY0OSwiZXhwIjoxNjU0MDU3MjQ5fQ.9M7L4VB5TG0Mg7kfPoOU_4I8izhko_EvTOJPs0mbD50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3003/user/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "14b7fb0a-9c39-467d-8c72-bc5e098b30dd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecipeById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5ZjZmNzEyLTRmNDAtNDUxNi04YzNhLWFkMDMyNjNjZjExMyIsImlhdCI6MTY1NDA1NjYwMiwiZXhwIjoxNjU0MDYwMjAyfQ.l72tLu71HqgulB_Zuj0E5838XhL4mLomRQuYSHQGjTs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3003/recipes/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"recipes",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "e6ba7496-34ba-44a7-822c-0a5da47568e2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFeed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3003/user/feed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"feed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
