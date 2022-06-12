@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "89dd1134-ea92-4e92-a1e9-55e524df98a9",
+		"name": "WireCard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19301541"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Izabella\",\r\n    \"email\": \"iza@labenu.com\",\r\n    \"cpf\": \"123456478348\",\r\n    \"password\": \"iza123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"paulo@labenu.com\",\r\n    \"password\": \"paulo123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCard",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjA5NmNhLWFiYjgtNDZmMC1iMzE2LTE4NzM3NTkzMDdhNCIsImlhdCI6MTY1NTAxNzEzOCwiZXhwIjoxNjU1MDIwNzM4fQ.dNOH0X_nUWwKW_0WSsQzXd4P1Wkc6l7LNVUekkPID2M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"896753981724\",\r\n    \"name\": \"Cassiane Card\",\r\n    \"expiration\": \"2030/08/24\",\r\n    \"cvv\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/createCard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"createCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjA5NmNhLWFiYjgtNDZmMC1iMzE2LTE4NzM3NTkzMDdhNCIsImlhdCI6MTY1NTAxNzEzOCwiZXhwIjoxNjU1MDIwNzM4fQ.dNOH0X_nUWwKW_0WSsQzXd4P1Wkc6l7LNVUekkPID2M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 190,\r\n    \"credit_card\": \"907865891672\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/creditPayment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"creditPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "boletoPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjA5NmNhLWFiYjgtNDZmMC1iMzE2LTE4NzM3NTkzMDdhNCIsImlhdCI6MTY1NTAxNzEzOCwiZXhwIjoxNjU1MDIwNzM4fQ.dNOH0X_nUWwKW_0WSsQzXd4P1Wkc6l7LNVUekkPID2M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 24\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/boletoPayment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"boletoPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPayment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhjZDI3MjJiLTFmNTMtNDgzYi1hOWIzLWUyMzkxMGI4MzE1NiIsImlhdCI6MTY1NDczODk2MCwiZXhwIjoxNjU0NzQyNTYwfQ.6b64QdEgNODToldqSSzisCLbA0eUFVUXh5G4dDYDaqg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3003/user/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
