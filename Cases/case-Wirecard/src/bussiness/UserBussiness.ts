@@ -58,7 +58,7 @@ export class UserBussiness {
             throw new Error("The user does not exist")
         }
 
-        const validationPassword = hashManager.compare(password, user.password)
+        const validationPassword = await hashManager.compare(password, user.password)
 
         if(!validationPassword) {
             throw new Error("Incorrect password")
