@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "b887bd8d-3da7-4cfc-aa03-05295010ceae",
+		"name": "EstanteVirtual (case olimpiada)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19301541"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"competition\": \"\",\r\n    \"score\": 1,\r\n    \"unity\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/registerUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSwimmingWinners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/swimming?qualifiers=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"swimming"
+					],
+					"query": [
+						{
+							"key": "qualifiers",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRunningWinner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/running?qualifiers=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"running"
+					],
+					"query": [
+						{
+							"key": "qualifiers",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDarthWinner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/dart?qualifiers=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"dart"
+					],
+					"query": [
+						{
+							"key": "qualifiers",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWinner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/olympics?competition=&qualifiers=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"olympics"
+					],
+					"query": [
+						{
+							"key": "competition",
+							"value": ""
+						},
+						{
+							"key": "qualifiers",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
